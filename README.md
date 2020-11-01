@@ -43,7 +43,8 @@ setContentView(R.layout.loading_alert);
 ```
 在base lib中设置公共的loading view，结果发现使用R.layout.loading_alert为布局时，不显示自己在R.layout.loading_alert文件中设置的布局，而是系统自带的一个布局，后来怀疑是loading_alert这个名字在系统中也定义过，这里优先找到了系统中的这个布局文件。
 
-
+#### 解决方案
+重命名布局文件，以当前module的名称为前缀。`R.layout.base_lib_loading_alert;` 这样就最大程度避免了重命名引发的问题。
 
 
 
